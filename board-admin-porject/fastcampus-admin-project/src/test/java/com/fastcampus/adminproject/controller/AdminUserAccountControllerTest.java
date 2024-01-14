@@ -9,16 +9,15 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.assertj.core.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @DisplayName("View 컨트롤러 - 어드민 회원")
 @Import(SecurityConfig.class)
-@WebMvcTest(AdminUserAccountControllerTest.class)
+@WebMvcTest(AdminUserAccountController.class)
 class AdminUserAccountControllerTest {
 
-    private MockMvc mvc;
+    private final MockMvc mvc;
 
     public AdminUserAccountControllerTest(@Autowired MockMvc mvc) {
         this.mvc = mvc;
@@ -33,7 +32,7 @@ class AdminUserAccountControllerTest {
         mvc.perform(get("/admin/members"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-                .andExpect(view().name("/admin/members"));
+                .andExpect(view().name("admin/members"));
     }
 
 }
