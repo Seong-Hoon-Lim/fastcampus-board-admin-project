@@ -18,7 +18,7 @@ public class UserAccountManagementController {
                     direction = Sort.Direction.DESC) Pageable pageable,
             Model model
             ) {
-        return "management/userAccounts";
+        return "management/user-accounts";
     }
 
 }
