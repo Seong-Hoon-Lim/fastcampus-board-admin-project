@@ -18,7 +18,7 @@ public class ArticleCommentManagementController {
                     direction = Sort.Direction.DESC) Pageable pageable,
             Model model
             ) {
-        return "management/articleComments";
+        return "management/article-comments";
     }
 
 }
