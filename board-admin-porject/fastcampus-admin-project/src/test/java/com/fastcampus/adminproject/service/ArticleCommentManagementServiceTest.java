@@ -1,11 +1,8 @@
 package com.fastcampus.adminproject.service;
 
-import com.fastcampus.adminproject.domain.constant.RoleType;
 import com.fastcampus.adminproject.dto.ArticleCommentDto;
-import com.fastcampus.adminproject.dto.ArticleDto;
 import com.fastcampus.adminproject.dto.UserAccountDto;
 import com.fastcampus.adminproject.dto.properties.ProjectProperties;
-import com.fastcampus.adminproject.dto.response.ArticleClientResponse;
 import com.fastcampus.adminproject.dto.response.ArticleCommentClientResponse;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,7 +22,6 @@ import org.springframework.test.web.client.MockRestServiceServer;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
@@ -175,7 +171,6 @@ class ArticleCommentManagementServiceTest {
     private UserAccountDto createUserAccountDto() {
         return UserAccountDto.of(
                 "unoTest",
-                Set.of(RoleType.ADMIN),
                 "uno-test@email.com",
                 "uno-test",
                 "test memo"

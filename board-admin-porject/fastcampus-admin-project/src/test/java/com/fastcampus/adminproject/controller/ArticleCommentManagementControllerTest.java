@@ -1,7 +1,6 @@
 package com.fastcampus.adminproject.controller;
 
 import com.fastcampus.adminproject.config.SecurityConfig;
-import com.fastcampus.adminproject.domain.constant.RoleType;
 import com.fastcampus.adminproject.dto.ArticleCommentDto;
 import com.fastcampus.adminproject.dto.UserAccountDto;
 import com.fastcampus.adminproject.service.ArticleCommentManagementService;
@@ -106,7 +105,6 @@ class ArticleCommentManagementControllerTest {
     private UserAccountDto createUserAccountDto() {
         return UserAccountDto.of(
                 "unoTest",
-                Set.of(RoleType.ADMIN),
                 "uno-test@email.com",
                 "uno-test",
                 "test memo"
