@@ -1,7 +1,6 @@
 package com.fastcampus.adminproject.controller;
 
 import com.fastcampus.adminproject.config.SecurityConfig;
-import com.fastcampus.adminproject.domain.constant.RoleType;
 import com.fastcampus.adminproject.dto.ArticleDto;
 import com.fastcampus.adminproject.dto.UserAccountDto;
 import com.fastcampus.adminproject.service.ArticleManagementService;
@@ -16,7 +15,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -108,8 +106,6 @@ class ArticleManagementControllerTest {
     private UserAccountDto createUserAccountDto() {
         return UserAccountDto.of(
                 "unoTest",
-                "pw",
-                Set.of(RoleType.ADMIN),
                 "uno-test@email.com",
                 "uno-test",
                 "test memo"
