@@ -40,7 +40,13 @@ public class AdminAccount extends AuditingFields {
 
     protected AdminAccount() {}
 
-    public AdminAccount(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo, String createdBy) {
+    public AdminAccount(String userId,
+                        String userPassword,
+                        Set<RoleType> roleTypes,
+                        String email,
+                        String nickname,
+                        String memo,
+                        String createdBy) {
         this.userId = userId;
         this.userPassword = userPassword;
         this.roleTypes = roleTypes;
@@ -51,11 +57,21 @@ public class AdminAccount extends AuditingFields {
         this.modifiedBy = createdBy;
     }
 
-    public static AdminAccount of(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo) {
+    public static AdminAccount of(String userId,
+                                  String userPassword,
+                                  Set<RoleType> roleTypes,
+                                  String email,
+                                  String nickname,
+                                  String memo) {
         return AdminAccount.of(userId, userPassword, roleTypes, email, nickname, memo, null);
     }
 
-    public static AdminAccount of(String userId, String userPassword, Set<RoleType> roleTypes, String email, String nickname, String memo,
+    public static AdminAccount of(String userId,
+                                  String userPassword,
+                                  Set<RoleType> roleTypes,
+                                  String email,
+                                  String nickname,
+                                  String memo,
                                   String createdBy) {
         return new AdminAccount(userId, userPassword, roleTypes, email, nickname, memo, createdBy);
     }
