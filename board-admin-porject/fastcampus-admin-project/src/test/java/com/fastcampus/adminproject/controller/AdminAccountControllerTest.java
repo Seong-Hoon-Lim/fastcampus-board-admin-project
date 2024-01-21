@@ -9,30 +9,30 @@ import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
-import static org.assertj.core.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-@DisplayName("View 컨트롤러 - 회원 관리")
+@DisplayName("View 컨트롤러 - 어드민 회원")
 @Import(SecurityConfig.class)
-@WebMvcTest(UserAccountManagementController.class)
-class AdminAccountManagementControllerTest {
+@WebMvcTest(AdminUserAccountController.class)
+class AdminAccountControllerTest {
 
     private final MockMvc mvc;
 
-    public AdminAccountManagementControllerTest(@Autowired MockMvc mvc) {
+    public AdminAccountControllerTest(@Autowired MockMvc mvc) {
         this.mvc = mvc;
     }
 
-    @DisplayName("[view][GET] 회원 관리 페이지 - 정상 호출")
+    @DisplayName("[view][GET] 어드민 회원 페이지 - 정상 호출")
     @Test
-    void givenNothing_whenRequestingUserAccountManagementView_thenReturnsUserAccountManagementView() throws Exception {
+    void givenNothing_whenRequestingAdminMembersView_thenReturnsAdminMembersView() throws Exception {
         // Given
 
         // When & Then
-        mvc.perform(get("/management/user-accounts"))
+        mvc.perform(get("/admin/members"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-                .andExpect(view().name("management/user-accounts"));
+                .andExpect(view().name("admin/members"));
     }
+
 }
