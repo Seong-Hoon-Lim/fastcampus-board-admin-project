@@ -1,6 +1,5 @@
 package com.fastcampus.adminproject.service;
 
-import com.fastcampus.adminproject.domain.constant.RoleType;
 import com.fastcampus.adminproject.dto.ArticleDto;
 import com.fastcampus.adminproject.dto.UserAccountDto;
 import com.fastcampus.adminproject.dto.properties.ProjectProperties;
@@ -23,7 +22,6 @@ import org.springframework.test.web.client.MockRestServiceServer;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.springframework.test.web.client.match.MockRestRequestMatchers.method;
@@ -35,31 +33,25 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 class ArticleManagementServiceTest {
 
 
-//    @Disabled("실제 API 호출 결과 관찰용이므로 평상시엔 비활성화")
+    //    @Disabled("실제 API 호출 결과 관찰용이므로 평상시엔 비활성화")
     @DisplayName("실제 API 호출 테스트")
     @SpringBootTest
     @Nested
     class RealApiTest {
-
         private final ArticleManagementService sut;
-
         @Autowired
         public RealApiTest(ArticleManagementService sut) {
             this.sut = sut;
         }
-
         @DisplayName("게시글 API를 호출하면, 게시글을 가져온다.")
         @Test
-        void given_when_then() {
-            //Given
-
-            //When
+        void givenNothing_whenCallingArticleApi_thenReturnsArticleList() {
+            // Given
+            // When
             List<ArticleDto> result = sut.getArticles();
-
-            //Then
+            // Then
             System.out.println(result.stream().findFirst());
             assertThat(result).isNotNull();
-
         }
 
     }
@@ -94,7 +86,7 @@ class ArticleManagementServiceTest {
             ArticleDto expectedArticle = createArticleDto("제목", "글");
             ArticleClientResponse expectedResponse = ArticleClientResponse.of(List.of(expectedArticle));
             server
-                    .expect(requestTo(projectProperties.board().url() + "/api/articles?size=1000"))
+                    .expect(requestTo(projectProperties.board().url() + "/api/articles?size=10000"))
                     .andRespond(withSuccess(
                             mapper.writeValueAsString(expectedResponse),
                             MediaType.APPLICATION_JSON
