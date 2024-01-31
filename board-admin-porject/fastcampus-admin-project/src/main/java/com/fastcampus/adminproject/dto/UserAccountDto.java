@@ -1,11 +1,6 @@
 package com.fastcampus.adminproject.dto;
 
-import com.fastcampus.adminproject.domain.AdminAccount;
-import com.fastcampus.adminproject.domain.constant.RoleType;
-
 import java.time.LocalDateTime;
-import java.util.Set;
-
 public record UserAccountDto(
         String userId,
         String email,
