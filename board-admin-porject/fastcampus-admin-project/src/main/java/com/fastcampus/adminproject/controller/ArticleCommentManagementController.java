@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class ArticleCommentManagementController {
 
-    private ArticleCommentManagementService articleCommentManagementService;
+    private final ArticleCommentManagementService articleCommentManagementService;
 
     @GetMapping
     public String articleComments(Model model) {
