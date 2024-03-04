@@ -50,3 +50,9 @@ tasks.named('bootBuildImage') {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+jar {
+	manifest {
+		attributes('Main-Class': 'com.fastcampus.adminproject.FastcampusAdminProjectApplication')
+	}
+}

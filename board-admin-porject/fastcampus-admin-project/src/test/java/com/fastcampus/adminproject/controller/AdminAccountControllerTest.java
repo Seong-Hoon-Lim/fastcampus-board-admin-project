@@ -47,6 +47,7 @@ class AdminAccountControllerTest {
                 .willReturn(createAdminAccountDto());
     }
 
+    @WithMockUser(username = "tester", roles = "USER")
     @DisplayName("[view][GET] 어드민 회원 페이지 - 정상 호출")
     @Test
     void givenAuthorizedUser_whenRequestingAdminMembersView_thenReturnsAdminMembersView() throws Exception {
