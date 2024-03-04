@@ -56,6 +56,13 @@ project:
   board:
     url: http://localhost:8080
 ---
+spring:
+  config.activate.on-profile: heroku
+  datasource.url: ${JAWSDB_URL}
+  jpa.hibernate.ddl-auto: create
+
+project.board.url: ${PROJECT_BOARD_URL}
+---
 
 spring:
   config:
