@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="실제 API 호출 테스트" tests="1" skipped="1" failures="0" errors="0" timestamp="2024-03-06T13:53:20" hostname="DESKTOP-CFTF9U4" time="0.0">
+  <properties/>
+  <testcase name="게시글 API를 호출하면, 게시글을 가져온다." classname="com.fastcampus.adminproject.service.ArticleManagementServiceTest$RealApiTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

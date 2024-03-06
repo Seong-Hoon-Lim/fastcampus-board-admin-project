@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - 컨트롤러 - 회원 관리</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>컨트롤러 - 회원 관리</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.fastcampus.adminproject.controller.html">com.fastcampus.adminproject.controller</a> &gt; UserAccountManagementControllerTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">3</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.094s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Method name</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">[view][GET] 회원 관리 페이지 - 정상 호출</td>
+<td class="success">givenNothing_whenRequestingUserAccountManagementView_thenReturnsUserAccountManagementView()</td>
+<td class="success">0.059s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[view][POST] 회원 삭제 - 정상 호출</td>
+<td class="success">givenUserAccountId_whenRequestingDeletion_thenRedirectsToUserAccountManagementView()</td>
+<td class="success">0.011s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">[data][GET] 회원 1개 - 정상 호출</td>
+<td class="success">givenUserAccountId_whenRequestingUserAccount_thenReturnsUserAccount()</td>
+<td class="success">0.024s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2024-03-06 22:53:12.120  INFO 9924 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.fastcampus.adminproject.controller.UserAccountManagementControllerTest], using SpringBootContextLoader
+2024-03-06 22:53:12.121  INFO 9924 --- [    Test worker] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.fastcampus.adminproject.controller.UserAccountManagementControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2024-03-06 22:53:12.121  INFO 9924 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.fastcampus.adminproject.controller.UserAccountManagementControllerTest]: UserAccountManagementControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-03-06 22:53:12.127  INFO 9924 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.fastcampus.adminproject.FastcampusAdminProjectApplication for test class com.fastcampus.adminproject.controller.UserAccountManagementControllerTest
+2024-03-06 22:53:12.128  INFO 9924 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener, org.springframework.security.test.context.support.ReactorContextTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2024-03-06 22:53:12.130  INFO 9924 --- [    Test worker] .b.t.a.w.s.WebMvcTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5ddd3150, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7b255b15, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@2165828d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3540d5e3, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1a325aa, org.springframework.test.context.support.DirtiesContextTestExecutionListener@508f2b78, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5d73aa0e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6e2f838e, org.springframework.security.test.context.support.WithSecurityContextTestExecutionListener@76b96594, org.springframework.test.context.event.EventPublishingTestExecutionListener@5fc444d0, org.springframework.security.test.context.support.ReactorContextTestExecutionListener@1f27b6fc, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@d866565, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@302e3484, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4db11495, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6f83db89, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@51102651, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@10dba2e3]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::               (v2.7.14)
+
+2024-03-06 22:53:12.182  INFO 9924 --- [    Test worker] .a.c.UserAccountManagementControllerTest : Starting UserAccountManagementControllerTest using Java 17.0.8 on DESKTOP-CFTF9U4 with PID 9924 (started by UserK in C:\project\github\FastCampus-SpringBoot\fastcampus-board-admin-project\board-admin-porject\fastcampus-admin-project)
+2024-03-06 22:53:12.182 DEBUG 9924 --- [    Test worker] .a.c.UserAccountManagementControllerTest : Running with Spring Boot v2.7.14, Spring v5.3.29
+2024-03-06 22:53:12.183  INFO 9924 --- [    Test worker] .a.c.UserAccountManagementControllerTest : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2024-03-06 22:53:12.924 DEBUG 9924 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 5 mappings in 'requestMappingHandlerMapping'
+2024-03-06 22:53:13.644 DEBUG 9924 --- [    Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-03-06 22:53:13.846  INFO 9924 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@204ce262, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@704e27f9, org.springframework.security.web.context.SecurityContextPersistenceFilter@6bddd4ce, org.springframework.security.web.header.HeaderWriterFilter@5c496ae6, org.springframework.security.web.csrf.CsrfFilter@850579f, org.springframework.security.web.authentication.logout.LogoutFilter@692cab82, org.springframework.security.oauth2.client.web.OAuth2AuthorizationRequestRedirectFilter@c76c029, org.springframework.security.oauth2.client.web.OAuth2LoginAuthenticationFilter@4435c9b9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@a0b11, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2b59285c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4a83c651, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@108d88b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@16019c16, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2091b6b9, org.springframework.security.web.session.SessionManagementFilter@613b9bd9, org.springframework.security.web.access.ExceptionTranslationFilter@374bbe80, org.springframework.security.web.access.intercept.AuthorizationFilter@11aeb673]
+2024-03-06 22:53:13.982 DEBUG 9924 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 1 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-03-06 22:53:14.022 DEBUG 9924 --- [    Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-03-06 22:53:14.325  INFO 9924 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-03-06 22:53:14.325  INFO 9924 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-03-06 22:53:14.326  INFO 9924 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 1 ms
+2024-03-06 22:53:14.350  INFO 9924 --- [    Test worker] .a.c.UserAccountManagementControllerTest : Started UserAccountManagementControllerTest in 2.217 seconds (JVM running for 92.336)
+2024-03-06 22:53:14.367 DEBUG 9924 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fastcampus.adminproject.controller.UserAccountManagementController#userAccounts(Model)
+2024-03-06 22:53:14.385 DEBUG 9924 --- [    Test worker] o.s.w.s.v.ContentNegotiatingViewResolver : Selected '*/*' given [*/*]
+2024-03-06 22:53:14.424 DEBUG 9924 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fastcampus.adminproject.controller.UserAccountManagementController#deleteUserAccount(String)
+2024-03-06 22:53:14.425 DEBUG 9924 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fastcampus.adminproject.controller.UserAccountManagementController#deleteUserAccount(String)
+2024-03-06 22:53:14.427 DEBUG 9924 --- [    Test worker] o.s.web.servlet.view.RedirectView        : View name 'redirect:', model {}
+2024-03-06 22:53:14.438 DEBUG 9924 --- [    Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to com.fastcampus.adminproject.controller.UserAccountManagementController#userAccount(String)
+2024-03-06 22:53:14.443 DEBUG 9924 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Using 'application/json', given [*/*] and supported [application/json, application/*+json, application/json, application/*+json]
+2024-03-06 22:53:14.451 DEBUG 9924 --- [    Test worker] m.m.a.RequestResponseBodyMethodProcessor : Writing [UserAccountResponse[userId=uno, email=uno-test@email.com, nickname=Uno, memo=test memo, createdAt=nu (truncated)...]
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 8.2.1</a> at 2024. 3. 6. 오후 10:53:21</p>
+</div>
+</div>
+</body>
+</html>
