@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "name": "project",
+      "type": "com.fastcampus.adminproject.dto.properties.ProjectProperties",
+      "sourceType": "com.fastcampus.adminproject.dto.properties.ProjectProperties"
+    },
+    {
+      "name": "project.board",
+      "type": "com.fastcampus.adminproject.dto.properties.ProjectProperties$Board",
+      "sourceType": "com.fastcampus.adminproject.dto.properties.ProjectProperties",
+      "sourceMethod": "board()"
+    },
+    {
+      "name": "spring.thymeleaf3",
+      "type": "com.fastcampus.adminproject.config.ThymeleafConfig$Thymeleaf3Properties",
+      "sourceType": "com.fastcampus.adminproject.config.ThymeleafConfig$Thymeleaf3Properties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "project.board.url",
+      "type": "java.lang.String",
+      "sourceType": "com.fastcampus.adminproject.dto.properties.ProjectProperties$Board"
+    },
+    {
+      "name": "spring.thymeleaf3.decoupled-logic",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.fastcampus.adminproject.config.ThymeleafConfig$Thymeleaf3Properties",
+      "defaultValue": false
+    }
+  ],
+  "hints": []
+}
